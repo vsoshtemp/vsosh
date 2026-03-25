@@ -3,10 +3,6 @@ import shutil
 import sys
 import time
 from pathlib import Path
-
-if sys.platform == "win32":
-    os.system("")
-
 import config
 from logger import init_logging, get_logger
 from analyzer import parse_extension, analyze_permissions, analyze_code, diff_versions, calculate_risk
@@ -36,7 +32,7 @@ def print_header():
     print()
     print(f"  {BOLD}{CYAN}╔══════════════════════════════════════════════════════╗{RESET}")
     print(f"  {BOLD}{CYAN}║   Анализатор браузерных расширений Chrome            ║{RESET}")
-    print(f"  {BOLD}{CYAN}║   Blue Team  |  Python {sys.version[:6]}  |  MITRE ATT&CK     ║{RESET}")
+    print(f"  {BOLD}{CYAN}║   Blue Team                                          ║{RESET}")
     print(f"  {BOLD}{CYAN}╚══════════════════════════════════════════════════════╝{RESET}")
     print()
 
